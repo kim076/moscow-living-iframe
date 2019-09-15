@@ -1,0 +1,260 @@
+<!doctype html>
+
+<html lang="en">
+    
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Iframe</title>
+<style>
+  * {
+    font-family: 'open sans',Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #000;
+  }
+    
+  ul, ol {
+    list-style: none;
+  }
+    
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+    
+  li {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+    nth-child {vertical-align: middle;}
+    
+  li:nth-child(1) { background-image: url(img/to%20go%20out%201.jpg);}
+  li:nth-child(2) { background-image: url(img/to%20explore%202b.jpg); }
+  li:nth-child(3) { background-image: url(img/to%20shop%203b.jpg); }
+    li:nth-child(4) { background-image: url(img/to%20organize%204.png); }
+  li:nth-child(5) { background-image: url(img/to%20learn%205b.jpg); }
+  li:nth-child(6) { background-image: url(img/buy%20flowers%206b.jpg); }
+  
+  a {
+    cursor: pointer;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 0;
+    font: normal normal 700 22px/1.4em 'open sans',sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 6px solid black;
+      background-color: white;
+    transition: color 0.4s ease 0s;
+  }
+    
+  a:hover {
+    color: white;
+    background: black;
+  }
+  </style>
+
+  <style>
+  .wrapper {
+    height: 250px;
+    width: 336px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 10px auto;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+  }
+
+  button {
+    background: transparent;
+    color: black;
+    padding: 10px;
+    border: 0 none;
+    cursor: pointer;
+  }
+
+  .carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease;
+  }
+
+  .card {
+    min-width: 336px;
+    height: 250px;
+    margin-right: .2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+      position: relative;
+  }
+   
+      .fb{
+          position: absolute;
+          top: 75%;
+            left: 0;
+          border: none;
+          background: transparent;
+          z-index: 9999;
+          
+      }
+      .fb:hover{
+          background:transparent;
+          transform: scale(1.2);
+      }
+      
+       .insta{
+          position: absolute;
+          top: 75%;
+            left: 40%;
+          border: none;
+          background: transparent;
+           z-index: 9999;
+      }
+       .insta:hover{
+          background: transparent;
+           transform: scale(1.2);
+      }
+      
+  </style>
+  
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="carousel" data-target="carousel">
+        <div class="card" data-target="card">
+            <img src="img/card1.jpg" height="250px" min-width="336px">
+            
+            <a href="https://www.facebook.com/moscowliving/" target="_blank" class="fb">
+            <img src="img/fb%20ML.png" height="70px" width="110px">
+            </a>
+            <a href="https://www.instagram.com/moscowliving/" target="_blank" class="insta">
+            <img src="img/inst%20ML.png" height="70px" width="115px">
+            </a>
+          
+          </div>
+        <div class="card" data-target="card">
+            <img src="img/card2.jpg" height="250px" min-width="336px">
+            <a href="https://www.facebook.com/moscowliving/" target="_blank" class="fb">
+            <img src="img/fb%20ML.png" height="70px" width="110px">
+            </a>
+            <a href="https://www.instagram.com/moscowliving/" target="_blank" class="insta">
+            <img src="img/inst%20ML.png" height="70px" width="115px">
+            </a>
+          </div>
+        <div class="card" data-target="card">
+            <img src="img/card3.jpg" height="250px" min-width="336px">
+            <a href="https://www.facebook.com/moscowliving/" target="_blank" class="fb">
+            <img src="img/fb%20ML.png" height="70px" width="110px">
+            </a>
+            <a href="https://www.instagram.com/moscowliving/" target="_blank" class="insta">
+            <img src="img/inst%20ML.png" height="70px" width="115px">
+            </a>
+          </div>
+        <div class="card" data-target="card">
+            <img src="img/card4.jpg" height="250px" min-width="336px">
+            <a href="https://www.facebook.com/moscowliving/" target="_blank" class="fb">
+            <img src="img/fb%20ML.png" height="70px" width="110px">
+            </a>
+            <a href="https://www.instagram.com/moscowliving/" target="_blank" class="insta">
+            <img src="img/inst%20ML.png" height="70px" width="115px">
+            </a>
+          </div>
+        </div>
+    
+      
+      <div class="button-wrapper">
+        <button data-action="slideLeft">&larr;</button>
+        <button data-action="slideRight">&rarr;</button>
+      </div>
+   </div>
+    
+    <ul>
+      <li>
+          <a href="https://www.moscowliving.org/to-go-out" target="_blank">To Go Out</a>
+      </li>
+      <li>
+        <a href="https://www.moscowliving.org/to-explore" target="_blank">To Explore</a>
+      </li>
+      <li>
+        <a href="https://www.moscowliving.org/to-shop" target="_blank">To Shop</a>
+      </li>
+      <li>
+        <a href="https://www.moscowliving.org/to-organize" target="_blank">To Organize</a>
+      </li>
+      <li>
+        <a href="https://www.moscowliving.org/to-learn" target="_blank">To Learn</a>
+      </li>
+      <li>
+        <a href="https://www.moscowliving.org/flowers" target="_blank">Buy Flowers</a>
+      </li>
+    </ul>
+</main>
+</body>
+<script>
+  // https://medium.com/@magyarn/simple-carousel-with-vanilla-js-3dd10a143ff2
+  // https://gist.githubusercontent.com/magyarn/d670b38e08469960e108aa8ef18538c2/raw/0e500ed3fb8e41d23c6920ceb60ba8fccc3d2a82/main-4.js
+  // Select the carousel you'll need to manipulate and the buttons you'll add events to
+  const carousel = document.querySelector("[data-target='carousel']");
+  const card = carousel.querySelector("[data-target='card']");
+  const leftButton = document.querySelector("[data-action='slideLeft']");
+  const rightButton = document.querySelector("[data-action='slideRight']");
+
+  // Prepare to limit the direction in which the carousel can slide, 
+  // and to control how much the carousel advances by each time.
+  // In order to slide the carousel so that only three cards are perfectly visible each time,
+  // you need to know the carousel width, and the margin placed on a given card in the carousel
+  const carouselWidth = carousel.offsetWidth;
+  const cardStyle = card.currentStyle || window.getComputedStyle(card)
+  const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+
+  // Count the number of total cards you have
+  const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+
+  // Define an offset property to dynamically update by clicking the button controls
+  // as well as a maxX property so the carousel knows when to stop at the upper limit
+  let offset = 0;
+  const maxX = -((cardCount / 1) * carouselWidth +
+    (cardMarginRight * (cardCount / 1)) -
+    carouselWidth - cardMarginRight);
+
+
+  // Add the click events
+  leftButton.addEventListener("click", function () {
+    if (offset !== 0) {
+      offset += carouselWidth + cardMarginRight;
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  });
+
+  rightButton.addEventListener("click", function () {
+    if (offset !== maxX) {
+      offset -= carouselWidth + cardMarginRight;
+      carousel.style.transform = `translateX(${offset}px)`;
+    }
+  });
+</script>
+
+</html>
